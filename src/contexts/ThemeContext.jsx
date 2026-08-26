@@ -1,5 +1,6 @@
 import {createContext, useState} from 'react';
 
+// eslint-disable-next-line react-refresh/only-export-components
 export const ThemeContext = createContext();
 
 export const ThemeProvider = ({ children }) => {
@@ -8,9 +9,9 @@ export const ThemeProvider = ({ children }) => {
   const toggleTheme = () => {
     setTheme(currentTheme => (currentTheme === 'light' ? 'dark' : 'light'));
   };
-  const value = { theme, toggleTheme };
+ const value = { theme, toggleTheme };
  return (
-    <ThemeContext value={{ value }}>
+    <ThemeContext value={value}>
       {children}
     </ThemeContext>
   );

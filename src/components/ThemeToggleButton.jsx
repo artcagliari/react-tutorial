@@ -1,4 +1,4 @@
-import React, {useContext} from "react";
+import {useContext} from "react";
 import { ThemeContext } from "../contexts/ThemeContext";
 
 const ThemeToggleButton = () => {
@@ -6,7 +6,7 @@ const ThemeToggleButton = () => {
 
   return (
     <button onClick={toggleTheme}>
-      {theme === "light" ? "🌙 Dark Mode" : "☀️ Light Mode"}
+      {theme === "light" ? "☀️ Light Mode" : "🌙 Dark Mode"}
     </button>
   );
 }
